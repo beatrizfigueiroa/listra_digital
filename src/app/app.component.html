@@ -1,0 +1,45 @@
+<div class="body">
+  <app-header></app-header>
+  <div class="content">
+    <div class="menu-buttons">
+      <button>Home</button>
+      <button>Veículos</button>
+    </div>
+    <div class="page-title">Veículos Encontrados</div>
+    <div class="line-style"></div>
+    <div class="secondary-menu">
+      <h4 class="page-subtitle">
+        {{ data.resultados.total }} carros encontrados
+      </h4>
+      <div class="secondary-menu-buttons-group">
+        <button class="secondary-menu-button icon-and-text">
+          <mat-icon>swap_vert</mat-icon>
+          <span>Mais relevantes</span>
+        </button>
+        <button class="secondary-menu-button">
+          <mat-icon class="material-icons">grid_view</mat-icon>
+        </button>
+        <button class="secondary-menu-button" *ngIf="getScreenWidth > 600">
+          <mat-icon>view_list</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="cards-group">
+      <app-card
+        *ngFor="
+          let item of data.resultados.data | slice : 0 : updatedValue;
+          let i = index
+        "
+        [data]="item"
+      ></app-card>
+    </div>
+    <h6 class="pagination-info">
+      Você já viu {{ updatedValue }} de {{ data.resultados.total }} veículos.
+    </h6>
+    <div class="load-more-button" (click)="loadMore()" #loadMoreButton>
+      <span> Carregar mais </span>
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

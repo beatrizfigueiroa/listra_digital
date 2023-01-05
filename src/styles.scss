@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #e5e5e5;
+  height: 100%;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+@mixin button-style {
+  color: #444444;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+@mixin display-flex {
+  display: flex;
+}
+
+@mixin align-center {
+  align-items: center;
+}
+
+@mixin desktop {
+  @media (min-width: 600px) {
+    @content;
+  }
+}

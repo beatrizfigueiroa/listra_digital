@@ -1,0 +1,39 @@
+<div class="card-body">
+  <div class="image-box">
+    <img [src]="image" (error)="handleMissingImage()" class="card-img" alt="" />
+    <div class="image-location">
+      <mat-icon>location_on</mat-icon>
+      <span> {{ data.loja_cidade }}</span>
+    </div>
+  </div>
+  <div class="card-informations">
+    <div class="card-title">
+      {{ data.marca_titulo }} {{ data.modelo_titulo }}
+    </div>
+    <div class="card-subtitle">{{ data.int_versao }}</div>
+    <div class="card-general-infos card-subtitle">
+      <div class="card-general-infos-item">
+        <mat-icon>date_range</mat-icon>
+        <span>
+          {{ data.int_anomodelofabricacao }}
+        </span>
+      </div>
+      <div class="card-general-infos-item">
+        <mat-icon>speed</mat-icon>
+        <span>
+          {{ data.int_quilometragem }}
+        </span>
+      </div>
+      <div class="card-general-infos-item">
+        <mat-icon>settings</mat-icon>
+        <span>
+          {{ data.vco_cambio.titulo }}
+        </span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="card-price">R$ {{ data.int_preco_cliente }}</div>
+      <div class="icon"><mat-icon>favorite_outline</mat-icon></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,156 @@
+@import "src/styles.scss";
+
+* {
+  color: #444444;
+}
+
+.body {
+  min-height: 100vh;
+  @include display-flex;
+  flex-direction: column;
+
+  .content {
+    padding: 0 16px;
+    @include desktop {
+      padding: 0 40px;
+    }
+
+    .menu-buttons {
+      padding: 32px 0 24px;
+      button + button {
+        margin-left: 8px;
+        @include desktop {
+          margin-left: 4px;
+        }
+      }
+      @include desktop {
+        padding: 34px auto 22px;
+      }
+
+      button {
+        border: #7d28f7 1px solid;
+        font-family: "Roboto", "Helvetica Neue", sans-serif;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        @include button-style;
+      }
+    }
+    .page-title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+
+      @include desktop {
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+    .line-style {
+      display: none;
+
+      @include desktop {
+        display: block;
+        height: 3px;
+        background-color: #7d28f7;
+        width: 55px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+      }
+    }
+    .secondary-menu {
+      .page-subtitle {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        margin: 3px 0 0;
+
+        @include desktop {
+          font-size: 18px;
+          line-height: 21px;
+        }
+      }
+      @include display-flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      @include desktop {
+        margin-bottom: 37px;
+      }
+      .secondary-menu-buttons-group {
+        display: inline-flex;
+        gap: 8px;
+        flex-direction: row-reverse;
+
+        span {
+          font-family: "Roboto", "Helvetica Neue", sans-serif;
+          font-weight: 500;
+        }
+
+        @include desktop {
+          flex-direction: row;
+        }
+      }
+      .secondary-menu-button {
+        border: #ffffff 1px solid;
+        font-family: a;
+        font-size: 14px;
+        @include button-style;
+        mat-icon {
+          color: #7d28f7;
+        }
+      }
+      .icon-and-text {
+        @include display-flex;
+        align-items: center;
+        mat-icon {
+          font-weight: 700;
+          margin-right: 8px;
+        }
+      }
+    }
+    .cards-group {
+      @include desktop {
+        @include display-flex;
+        flex-wrap: wrap;
+        gap: 26px;
+        app-card {
+          flex-grow: 1;
+        }
+      }
+    }
+    .pagination-info {
+      display: none;
+      @include desktop {
+        display: block;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        margin: 64px 0 22px;
+      }
+    }
+    .load-more-button {
+      display: none;
+      @include desktop {
+        cursor: pointer;
+        @include display-flex;
+        @include align-center;
+        justify-content: center;
+        margin-bottom: 44px;
+        span {
+          color: #7d28f7;
+        }
+        mat-icon {
+          color: #7d28f7;
+        }
+      }
+    }
+  }
+  app-footer {
+    margin-top: auto;
+  }
+}
