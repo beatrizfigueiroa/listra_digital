@@ -2,12 +2,12 @@
 
 .card-body {
   width: 100%;
-  margin: 0 auto 15px;
+  margin: 0 auto px-to-rem(15);
   background-color: #ffffff;
-  width: 300px;
-  height: 343px;
-  border-radius: 8px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  width: px-to-rem(300);
+  height: px-to-rem(343);
+  border-radius: px-to-rem(8);
+  box-shadow: 0 px-to-rem(1) px-to-rem(3) rgba(0, 0, 0, 0.25);
 
   @include desktop {
     margin-bottom: 0;
@@ -17,11 +17,12 @@
   }
   div.image-box > .image-location {
     position: absolute;
-    top: 149px;
-    border-radius: 0px 16px 16px 0px;
+    top: px-to-rem(149);
+    border-radius: 0 px-to-rem(16) px-to-rem(16) px-to-rem(0);
     background-color: #ffffff;
-    width: 60%;
-    height: 26px;
+    padding: 0 px-to-rem(8);
+    height: px-to-rem(26);
+    gap: px-to-rem(4);
 
     @include display-flex;
     @include align-center;
@@ -31,22 +32,23 @@
     }
   }
   .card-img {
-    width: 300px;
-    height: 191px;
+    width: px-to-rem(300);
+    height: px-to-rem(191);
   }
   .card-informations {
-    margin: 16px 15px;
+    margin: px-to-rem(16) px-to-rem(15);
     .card-title {
       font-weight: 700;
-      font-size: 20px;
-      line-height: 23px;
-      margin-bottom: 8px;
+      font-size: px-to-rem(20);
+      line-height: px-to-rem(23);
+      margin-bottom: px-to-rem(8);
     }
     .card-subtitle {
       font-weight: 400;
-      font-size: 14px;
-      line-height: 14px;
-      margin-bottom: 16px;
+      font-size: px-to-rem(14);
+      line-height: px-to-rem(14);
+      margin-bottom: px-to-rem(16);
+      max-height: px-to-rem(16);
     }
 
     .card-general-infos {
@@ -54,12 +56,12 @@
         @include display-flex;
         @include align-center;
         mat-icon {
-          font-size: 16px;
-          height: 16px;
-          width: 16px;
+          font-size: px-to-rem(16);
+          height: px-to-rem(16);
+          width: px-to-rem(16);
         }
         mat-icon + span {
-          margin-left: 4px;
+          margin-left: px-to-rem(4);
         }
       }
       @include display-flex;
@@ -74,8 +76,8 @@
 
       .card-price {
         font-weight: 700;
-        font-size: 26px;
-        line-height: 30px;
+        font-size: px-to-rem(26);
+        line-height: px-to-rem(30);
       }
 
       mat-icon {

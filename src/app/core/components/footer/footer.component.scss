@@ -1,9 +1,9 @@
 @import "src/styles.scss";
 
 .footer-background {
-  margin-top: 28px;
+  margin-top: px-to-rem(28);
   background: rgba(52, 58, 64, 0.8);
-  height: 264px;
+  height: px-to-rem(264);
   width: 100%;
   @include display-flex;
   justify-content: space-evenly;
@@ -13,7 +13,7 @@
   @include desktop {
     flex-direction: row;
     margin-top: 0;
-    padding-top: 40px;
+    padding-top: px-to-rem(40);
   }
 
   .flex {
@@ -31,22 +31,22 @@
   }
 
   .column-subtitle {
-    margin-top: 10px;
+    margin-top: px-to-rem(10);
     display: block;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 30px;
+    font-size: px-to-rem(14);
+    line-height: px-to-rem(30);
   }
 
   .column-title {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: px-to-rem(20);
+    line-height: px-to-rem(23);
     text-align: center;
 
     @include desktop {
       text-align: left;
-      margin-bottom: 10px;
+      margin-bottom: px-to-rem(10);
     }
   }
 
@@ -57,11 +57,11 @@
     }
   }
   .fifth-column {
-    min-width: 180px;
+    min-width: px-to-rem(180);
 
     .column-title {
       font-weight: 400;
-      font-size: 16px;
+      font-size: px-to-rem(16);
     }
     .row {
       @include display-flex;
@@ -69,18 +69,18 @@
       justify-content: space-between;
       button {
         @include button-style;
-        height: 43px;
+        height: px-to-rem(43);
         color: #ffffff;
       }
       .phone-number {
-        width: 128px;
+        width: px-to-rem(128);
         font-weight: 500;
-        font-size: 16px;
+        font-size: px-to-rem(16);
         border: #7d28f7;
         background-color: #7d28f7;
       }
       .whatsapp-icon {
-        width: 40px;
+        width: px-to-rem(40);
         border: #4ac959;
         background-color: #4ac959;
       }
@@ -93,7 +93,7 @@
     }
     .column-title {
       text-align: center;
-      margin-bottom: 22px;
+      margin-bottom: px-to-rem(22);
     }
     .row {
       @include display-flex;

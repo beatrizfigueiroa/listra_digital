@@ -19,19 +19,18 @@ export class AppComponent implements OnInit {
 
   public data: any;
 
-  updatedValue = 8;
-  totalItems = 0;
+  public updatedValue = 8;
+  public totalItems = 0;
 
   public getScreenWidth: any;
-  public getScreenHeight: any;
 
-  constructor(private list: DataService) {}
+  constructor(private dataService: DataService) {}
 
   async ngOnInit() {
     this.getScreenWidth = window.innerWidth;
-    this.getScreenHeight = window.innerHeight;
-    this.data = await this.list.list().subscribe((result) => {
+    this.data = await this.dataService.getData().subscribe((result) => {
       this.data = result;
+      //the total value from the api is smaller than the real size of the data array.
       this.totalItems = this.data.resultados.data.length;
     });
   }
@@ -39,7 +38,6 @@ export class AppComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onWindowResize() {
     this.getScreenWidth = window.innerWidth;
-    this.getScreenHeight = window.innerHeight;
   }
 
   loadMore() {

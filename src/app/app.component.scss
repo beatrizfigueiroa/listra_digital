@@ -10,40 +10,40 @@
   flex-direction: column;
 
   .content {
-    padding: 0 16px;
+    padding: 0 px-to-rem(16);
     @include desktop {
-      padding: 0 40px;
+      padding: 0 px-to-rem(40);
     }
 
     .menu-buttons {
-      padding: 32px 0 24px;
+      padding: px-to-rem(32) 0 px-to-rem(24);
       button + button {
-        margin-left: 8px;
+        margin-left: px-to-rem(8);
         @include desktop {
-          margin-left: 4px;
+          margin-left: px-to-rem(4);
         }
       }
       @include desktop {
-        padding: 34px auto 22px;
+        padding: px-to-rem(34) auto px-to-rem(22);
       }
 
       button {
-        border: #7d28f7 1px solid;
+        border: #7d28f7 px-to-rem(1) solid;
         font-family: "Roboto", "Helvetica Neue", sans-serif;
         font-weight: 500;
-        font-size: 10px;
-        line-height: 12px;
+        font-size: px-to-rem(10);
+        line-height: px-to-rem(12);
         @include button-style;
       }
     }
     .page-title {
       font-weight: 700;
-      font-size: 18px;
-      line-height: 21px;
+      font-size: px-to-rem(18);
+      line-height: px-to-rem(21);
 
       @include desktop {
-        font-size: 32px;
-        line-height: 38px;
+        font-size: px-to-rem(32);
+        line-height: px-to-rem(38);
       }
     }
     .line-style {
@@ -51,38 +51,38 @@
 
       @include desktop {
         display: block;
-        height: 3px;
+        height: px-to-rem(3);
         background-color: #7d28f7;
-        width: 55px;
-        border-radius: 4px;
-        margin-bottom: 16px;
+        width: px-to-rem(55);
+        border-radius: px-to-rem(4);
+        margin-bottom: px-to-rem(16);
       }
     }
     .secondary-menu {
       .page-subtitle {
         font-weight: 400;
-        font-size: 12px;
-        line-height: 14px;
-        margin: 3px 0 0;
+        font-size: px-to-rem(12);
+        line-height: px-to-rem(14);
+        margin: px-to-rem(3) 0 0;
 
         @include desktop {
-          font-size: 18px;
-          line-height: 21px;
+          font-size: px-to-rem(18);
+          line-height: px-to-rem(21);
         }
       }
       @include display-flex;
       flex-wrap: wrap;
-      gap: 24px;
+      gap: px-to-rem(24);
       width: 100%;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 24px;
+      margin-bottom: px-to-rem(24);
       @include desktop {
-        margin-bottom: 37px;
+        margin-bottom: px-to-rem(37);
       }
       .secondary-menu-buttons-group {
         display: inline-flex;
-        gap: 8px;
+        gap: px-to-rem(8);
         flex-direction: row-reverse;
 
         span {
@@ -95,9 +95,9 @@
         }
       }
       .secondary-menu-button {
-        border: #ffffff 1px solid;
+        border: #ffffff px-to-rem(1) solid;
         font-family: a;
-        font-size: 14px;
+        font-size: px-to-rem(14);
         @include button-style;
         mat-icon {
           color: #7d28f7;
@@ -108,7 +108,7 @@
         align-items: center;
         mat-icon {
           font-weight: 700;
-          margin-right: 8px;
+          margin-right: px-to-rem(8);
         }
       }
     }
@@ -116,7 +116,7 @@
       @include desktop {
         @include display-flex;
         flex-wrap: wrap;
-        gap: 26px;
+        gap: px-to-rem(26);
         app-card {
           flex-grow: 1;
         }
@@ -127,10 +127,10 @@
       @include desktop {
         display: block;
         font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
+        font-size: px-to-rem(14);
+        line-height: px-to-rem(16);
         text-align: center;
-        margin: 64px 0 22px;
+        margin: px-to-rem(64) 0 px-to-rem(22);
       }
     }
     .load-more-button {
@@ -140,7 +140,7 @@
         @include display-flex;
         @include align-center;
         justify-content: center;
-        margin-bottom: 44px;
+        margin-bottom: px-to-rem(44);
         span {
           color: #7d28f7;
         }

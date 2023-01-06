@@ -11,11 +11,20 @@ export class CardComponent implements OnInit {
   @Input()
   data: any;
 
+  formatedPrice: any;
+
   image: string | undefined;
   public handleMissingImage() {
     this.image = '../../../../assets/images/default_photo.png';
   }
   ngOnInit(): void {
     this.image = this.data.vco_veiculos_foto.url_medium;
+
+    this.formatedPrice = this.formatter.format(this.data.int_preco_cliente);
   }
+
+  formatter = new Intl.NumberFormat('pt-br', {
+    style: 'currency',
+    currency: 'BRL',
+  });
 }

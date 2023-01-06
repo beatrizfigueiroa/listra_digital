@@ -3,21 +3,21 @@
 .header-background {
   background-color: #7d28f7;
   width: 100%;
-  height: 52px;
+  height: px-to-rem(52);
   @include display-flex;
   @include align-center;
   justify-content: center;
 
   @include desktop {
-    height: 61px;
+    height: px-to-rem(61);
   }
 }
 .header-image {
-  width: 126px;
-  height: 37px;
+  width: px-to-rem(126);
+  height: px-to-rem(37);
 
   @include desktop {
-    width: 155px;
-    height: 45px;
+    width: px-to-rem(155);
+    height: px-to-rem(45);
   }
 }
